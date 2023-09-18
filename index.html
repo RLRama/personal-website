@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e7d582cb6c.js" crossorigin="anonymous"></script>
 
-    <nav class="navbar fixed-bottom bg-body-tertiary">
+    <nav class="navbar fixed-bottom bg-body-tertiary" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/logo.svg" alt="Logo" width="30" height="24">
@@ -21,7 +21,7 @@
         </div>
     </nav>
 
-    <div class="px-4 py-5 my-5 text-center">
+    <div class="px-4 py-5 my-5 text-center" id="heroSection">
       <img class="d-block mx-auto mb-4" src="assets/images/logo.svg" alt="Logo" width="72" height="57">
       <h1 class="display-5 fw-bold text-body-emphasis">Ramiro Ignacio Rios Lopez</h1>
       <div class="col-lg-6 mx-auto">
@@ -29,24 +29,67 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="projectsSection">
       <h2 class="pb-2 text-center border-bottom">Projects</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         
-        <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="col-sm-6 mb-3 mb-sm-0" id="project01Card">
           <div class="card">
-            <img src="assets\images\project01.png" class="card-img-top" alt="Project thumbnail">
-            <div class="card-body">
-              <h5 class="card-title">Digital Health Story - La Rioja, Argentina</h5>
+            <div class="card-header">
+              Digital Health Story - La Rioja, Argentina
+            </div>
+            <img src="assets\images\project01.png" alt="Project thumbnail">
+            <div class="card-body">            
+              <h5 class="card-title"></h5>
               <h6 class="card-subtitle mb-2 text-body-secondary">Java, Spring Framework, Typescript, Angular, PostgreSQL</h6>
-              <p class="card-text">Fork of Pladema's open-source project (SGH). I do backend extension tasks and maintenance.</p>
+              <p class="card-text">A fork from HSI, a Pladema's open-source project.</p>
+            </div>
+            <div class="card-footer">
               <a data-bs-toggle="modal" data-bs-target="#project01Modal" class="btn btn-outline-primary">See more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 mb-3 mb-sm-0" id="project02Card">
+          <div class="card">
+            <div class="card-header">
+              Python chatbot
+            </div>
+            <img src="assets\images\project02.png" alt="Project thumbnail">
+            <div class="card-body">            
+              <h5 class="card-title"></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Python, Streamlit, Transformers</h6>
+              <p class="card-text">A simple chatbot made with Python to test open source models.</p>
+            </div>
+            <div class="card-footer">
+              <a data-bs-toggle="modal" data-bs-target="#project02Modal" class="btn btn-outline-primary">See more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 mb-3 mb-sm-0" id="project03Card">
+          <div class="card">
+            <div class="card-header">
+              Queueing theories simulation
+            </div>
+            <img src="assets\images\project03.png" alt="Project thumbnail">
+            <div class="card-body">            
+              <h5 class="card-title"></h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Python, Streamlit, NumPy</h6>
+              <p class="card-text">A simple project made with Python to run tests of different queueing systems.</p>
+            </div>
+            <div class="card-footer">
+              <a data-bs-toggle="modal" data-bs-target="#project03Modal" class="btn btn-outline-primary">See more</a>
             </div>
           </div>
         </div>
 
       </div>
     </div>
+
+    <!-- Footer -->
+
+    <br>
 
     <!-- Modals -->
 
@@ -58,13 +101,64 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <img src="assets\images\project01.png" class="card-img-top" alt="Project thumbnail">
-            <p>Test</p>
+            <img src="assets\images\project01.png" class="img-fluid" alt="Project thumbnail">
+            <p class="my-2">
+              This project is a fork of <a href="https://www.pladema.net/">Pladema</a>'s main project, <a href="https://hsi.pladema.net/sistema/">HSI</a>. Our implementation has approximately twice the functionality. <br>
+              It uses a large number of tools, such as Spring Framework (Boot, Security), Maven, Lombok, and Hibernate, among others.
+            </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-            <button href="https://github.com/Historia-Clinica-La-Rioja/historia_clinica_LR/" type="button" class="btn btn-outline-info">Go to repository</button>
-            <button type="button" class="btn btn-outline-primary">View site</button>
+            <a href="https://github.com/Historia-Clinica-La-Rioja/historia_clinica_LR" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
+            <a href="https://hsi-test.larioja.gob.ar/auth/login?returnUrl=%2Fhome" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary">Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="project02Modal" tabindex="-1" aria-labelledby="project02ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="project02ModalLabel">Python chatbot</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="assets\images\project02.png" class="img-fluid" alt="Project thumbnail">
+            <p class="my-2">
+              A small Python web app created as a final project for course 41: Update Seminar II.
+              <br>
+              It uses Streamlit, Huggingface, Transformers, and 'streamlit-chat' component to simulate a chatbot.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <a href="https://github.com/RLRama/chatbot-basic" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
+            <a href="https://seminario2-dssi-rlri.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary">Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="project03Modal" tabindex="-1" aria-labelledby="project03ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="project03ModalLabel">Python chatbot</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="assets\images\project03.png" class="img-fluid" alt="Project thumbnail">
+            <p class="my-2">
+              A small Python web app created as a final project for course 45: Models & System Simulations.
+              <br>
+              It uses Python, Streamlit, SimPy, NumPy, and Pandas.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <a href="https://github.com/RLRama/myss-p" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
+            <a href="https://myss-tp-cn.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary">Website</a>
           </div>
         </div>
       </div>
