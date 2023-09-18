@@ -25,27 +25,51 @@
       <img class="d-block mx-auto mb-4" src="assets/images/logo.svg" alt="Logo" width="72" height="57">
       <h1 class="display-5 fw-bold text-body-emphasis">Ramiro Ignacio Rios Lopez</h1>
       <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Information Engineering Systems student. Backend developer.</p>
-      </div>
-    </div>
-    
-    <div class="container">
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <img src="assets\images\Project_01.png" class="card-img-top" alt="Project thumbnail">
-            <div class="card-body">
-              <h5 class="card-title">Digital Health Story - La Rioja</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Java, Spring Framework, Typescript, Angular, PostgreSQL</h6>
-              <p class="card-text">Fork of Pladema's open-source project (SGH). I'm at the backend!</p>
-              <a href="https://hsi-test.larioja.gob.ar/auth/login?returnUrl=%2Fhome" class="btn btn-primary">See more</a>
-            </div>
-          </div>
-        </div>
-        
+        <p class="lead mb-4">Information Engineering Systems student. Junior developer.</p>
       </div>
     </div>
 
+    <div class="container">
+      <h2 class="pb-2 text-center border-bottom">Projects</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card">
+            <img src="assets\images\project01.png" class="card-img-top" alt="Project thumbnail">
+            <div class="card-body">
+              <h5 class="card-title">Digital Health Story - La Rioja, Argentina</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Java, Spring Framework, Typescript, Angular, PostgreSQL</h6>
+              <p class="card-text">Fork of Pladema's open-source project (SGH). I do backend extension tasks and maintenance.</p>
+              <a data-bs-toggle="modal" data-bs-target="#project01Modal" class="btn btn-outline-primary">See more</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modals -->
+
+    <div class="modal fade" id="project01Modal" tabindex="-1" aria-labelledby="project01ModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="project01ModalLabel">Digital Health Story - La Rioja, Argentina</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="assets\images\project01.png" class="card-img-top" alt="Project thumbnail">
+            <p>Test</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button href="https://github.com/Historia-Clinica-La-Rioja/historia_clinica_LR/" type="button" class="btn btn-outline-info">Go to repository</button>
+            <button type="button" class="btn btn-outline-primary">View site</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
   </body>
 </html>
 
