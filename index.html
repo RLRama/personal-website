@@ -29,6 +29,8 @@
       </div>
     </div>
 
+    <!-- Projects -->
+
     <div class="container" id="projectsSection">
       <h2 class="pb-2 text-center border-bottom">Projects</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
@@ -41,7 +43,7 @@
             <img src="assets\images\project01.png" alt="Project thumbnail">
             <div class="card-body">            
               <h5 class="card-title"></h5>
-              <h6 class="card-subtitle mb-2 text-secondary-emphasis">Java, Spring Framework, Typescript, Angular, PostgreSQL</h6>
+              <h6 class="card-subtitle mb-2 text-dark-emphasis">Java, Spring Framework, Typescript, Angular, PostgreSQL</h6>
               <p class="card-text">A fork from HSI, a Pladema's open-source project.</p>
             </div>
             <div class="card-footer">
@@ -58,7 +60,7 @@
             <img src="assets\images\project02.png" alt="Project thumbnail">
             <div class="card-body">            
               <h5 class="card-title"></h5>
-              <h6 class="card-subtitle mb-2 text-secondary-emphasis">Python, Streamlit, Transformers</h6>
+              <h6 class="card-subtitle mb-2 text-dark-emphasis">Python, Streamlit, Transformers</h6>
               <p class="card-text">A simple chatbot made with Python to test open source models.</p>
             </div>
             <div class="card-footer">
@@ -75,7 +77,7 @@
             <img src="assets\images\project03.png" alt="Project thumbnail">
             <div class="card-body">            
               <h5 class="card-title"></h5>
-              <h6 class="card-subtitle mb-2 text-secondary-emphasis">Python, Streamlit, NumPy</h6>
+              <h6 class="card-subtitle mb-2 text-dark-emphasis">Python, Streamlit, NumPy</h6>
               <p class="card-text">A simple project made with Python to run tests of different queueing systems.</p>
             </div>
             <div class="card-footer">
@@ -85,10 +87,25 @@
         </div>
 
       </div>
+      <p class="text-center">Check my most recent work on <a href="https://github.com/RLRama" class="link-body-emphasis"><i class="bi bi-github"></i> GitHub</a> and <a href="https://gitlab.com/rl.ramiro11" class="link-body-emphasis"><i class="bi bi-gitlab"></i> Gitlab</a>.</p>
+    </div>
+
+    <div class="container my-4 text-center" id="aboutSection">
+        <h2 class="pb-2 text-center border-bottom">About me</h2>
+        <p class="my-4 text-center">I'm a junior developer, based on La Rioja, Argentina. I strive to learn trending technologies. I like to follow clean coding conventions and best practices. When I'm not programming, I enjoy weightlifting and playing video games.
+        </p>
+        <p class="text-center text-dark-emphasis">Download resume</p>
+        <div class="btn-group" role="group" aria-label="Button group">
+          <a class="btn btn-outline-primary" href="#" role="button"><i class="bi bi-filetype-pdf"></i> PDF</a>
+          <a class="btn btn-outline-primary" href="#" role="button"><i class="bi bi-filetype-docx"></i> DOCX</a>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
-
+    
+    <br>
+    <br>
     <br>
 
     <!-- Modals -->
@@ -103,14 +120,15 @@
           <div class="modal-body">
             <img src="assets\images\project01.png" class="img-fluid" alt="Project thumbnail">
             <p class="my-2">
-              This project is a fork of <a href="https://www.pladema.net/">Pladema</a>'s main project, <a href="https://hsi.pladema.net/sistema/">HSI</a>. Our implementation has approximately twice the functionality. <br>
-              It uses a large number of tools, such as Spring Framework (Boot, Security), Maven, Lombok, and Hibernate, among others.
+              This project is a fork of <a class="link-body-emphasis" href="https://www.pladema.net/">Pladema</a>'s main project, <a class="link-body-emphasis" href="https://hsi.pladema.net/sistema/">HSI</a>. Our implementation has approximately twice the functionality.<br>
+              <p class="text-dark-emphasis">Technologies</p>
+              It uses a huge number of tools, but the ones I'm more involved in are Java, Spring Framework, Lombok, Maven, and design principles such as Clean architecture, Hexagonal architecture, and RESTful API.
             </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
             <a href="https://github.com/Historia-Clinica-La-Rioja/historia_clinica_LR" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
-            <a href="https://hsi-test.larioja.gob.ar/auth/login?returnUrl=%2Fhome" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary">Website</a>
+            <a href="https://hsi-test.larioja.gob.ar/auth/login?returnUrl=%2Fhome" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary"><i class="bi bi-box-arrow-up-right"></i> Website</a>
           </div>
         </div>
       </div>
@@ -127,14 +145,14 @@
             <img src="assets\images\project02.png" class="img-fluid" alt="Project thumbnail">
             <p class="my-2">
               A small Python web app created as a final project for course 41: Update Seminar II.
-              <br>
+              <p class="text-dark-emphasis">Technologies</p>
               It uses Streamlit, Huggingface, Transformers, and 'streamlit-chat' component to simulate a chatbot.
             </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
             <a href="https://github.com/RLRama/chatbot-basic" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
-            <a href="https://seminario2-dssi-rlri.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary">Website</a>
+            <a href="https://seminario2-dssi-rlri.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary"><i class="bi bi-box-arrow-up-right"></i> Website</a>
           </div>
         </div>
       </div>
@@ -151,14 +169,14 @@
             <img src="assets\images\project03.png" class="img-fluid" alt="Project thumbnail">
             <p class="my-2">
               A small Python web app created as a final project for course 45: Models & System Simulations.
-              <br>
+              <p class="text-dark-emphasis">Technologies</p>
               It uses Python, Streamlit, SimPy, NumPy, and Pandas. Simulates different types of queueing systems, with custom variables.
             </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
             <a href="https://github.com/RLRama/myss-p" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
-            <a href="https://myss-tp-cn.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary">Website</a>
+            <a href="https://myss-tp-cn.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary"><i class="bi bi-box-arrow-up-right"></i> Website</a>
           </div>
         </div>
       </div>
