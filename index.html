@@ -92,7 +92,7 @@
 
     <div class="container my-4 text-center" id="aboutSection">
         <h2 class="pb-2 text-center border-bottom">About me</h2>
-        <p class="my-4 text-center">I'm a junior developer, based on La Rioja, Argentina. I strive to learn trending technologies. I like to follow clean coding conventions and best practices. When I'm not programming, I enjoy weightlifting and playing video games.
+        <p class="my-4 text-center">I'm a junior developer, based in La Rioja, Argentina. I like to follow clean coding conventions and best practices. When I'm not programming, I enjoy weightlifting and playing video games. I speak native spanish and <a class="link-body-emphasis" href="https://efset.org/cert/gYXwA3">fluent english</a>.
         </p>
         <p class="text-center text-dark-emphasis">Download resume</p>
         <div class="btn-group" role="group" aria-label="Button group">
@@ -103,7 +103,7 @@
     </div>
 
     <div class="container mt-5" id="experienceSection">
-      <h2 class="text-center border-bottom">Experience</h2>
+      <h2 class="pb-2 text-center border-bottom">Experience</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
         <div class="feature col">
           <h3 class="fs-2 text-body-emphasis"><i class="bi bi-terminal"></i> Back-end developer</h3>
@@ -112,7 +112,7 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Collaborated in a cross-functional team to maintain and enhance a RESTful API built on Spring Boot.</li>
             <li class="list-group-item">Developed new API endpoints to support client requirements.</li>
-            <li class="list-group-item">Collaborated with frontend developers to design and document clear API endpoints, promoting seamless app integration.</li>
+            <li class="list-group-item">Collaborated with frontend developers and DBAs to design and document clear API endpoints, promoting seamless app integration.</li>
           </ul>
         </div>
         <div class="feature col">
@@ -129,24 +129,67 @@
     </div>
 
     <div class="container" id="educationSection">
-      <h2 class="text-center border-bottom">Education</h2>
+      <h2 class="pb-2 text-center border-bottom">Education</h2>
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
         <div class="feature col">
-          <h3 class="fs-2 text-body-emphasis"><i class="bi bi-terminal"></i> Information Systems Engineering degree</h3>
+          <h3 class="fs-2 text-body-emphasis"><i class="bi bi-terminal"></i> Degree in Information Systems Engineering</h3>
           <h4 class="text-dark-emphasis">National University of La Rioja, Argentina</h4>
           <h5 class="text-light-emphasis">2019 - 2024 est.</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">Relevant coursework: </li>
+            <li class="list-group-item">Relevant coursework: Algorithms and data structures, Probability and statistics, Information Systems, Advanced Hardware Architecture, Programming, Artificial Intelligence, Software Engineering, and Models and Systems Simulation</li>
             <li class="list-group-item">Capstone project: to be determined</li>
+          </ul>
+        </div>
+        <div class="feature col">
+          <h3 class="fs-2 text-body-emphasis"><i class="bi bi-terminal"></i> Office automation technician</h3>
+          <h4 class="text-dark-emphasis">Manuel Belgrano Private Institute</h4>
+          <h5 class="text-light-emphasis">2017 - 2018</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Relevant coursework: Computing and Mathematics</li>
+            <li class="list-group-item">Capstone project: a hands-on Office essentials guide</li>
           </ul>
         </div>
       </div>
     </div>
 
+    <div class="container text-center" id="contactSection">
+      <h2 class="pb-2 text-center border-bottom">Contact</h2>
+      <p>Connect with me!</p>
+      <div class="btn-group" role="group" aria-label="Contact information">
+        <a href="https://www.linkedin.com/in/rlrama/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary" role="button"><i class="bi bi-linkedin"></i> LinkedIn</a>
+        <a href="mailto:rl.ramiro11@gmail.com" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary" role="button"><i class="bi bi-envelope"></i> Mail (mailto)</a>
+      </div>
+      <p class="my-3">or</p>
+      <form action="https://formspree.io/f/xzbljlwp" method="post">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+      </form>
+      </div>
+    </div>
+
     <!-- Footer -->
     
-    <br>
-    <br>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center"><span class="mb-3 mb-md-0 text-body-secondary">© 2023 Rios Lopez Ramiro Ignacio</span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><i class="bi bi-arrow-up"></i> Inicio</a></li>
+        </ul>
+      </footer>
+    </div>
     <br>
 
     <!-- Modals -->
@@ -168,8 +211,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-            <a href="https://github.com/Historia-Clinica-La-Rioja/historia_clinica_LR" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
-            <a href="https://hsi-test.larioja.gob.ar/auth/login?returnUrl=%2Fhome" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary"><i class="bi bi-box-arrow-up-right"></i> Website</a>
+            <a href="https://github.com/Historia-Clinica-La-Rioja/historia_clinica_LR" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info" role="button">Repository</a>
+            <a href="https://hsi-test.larioja.gob.ar/auth/login?returnUrl=%2Fhome" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary" role="button"><i class="bi bi-box-arrow-up-right"></i> Website</a>
           </div>
         </div>
       </div>
@@ -192,8 +235,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-            <a href="https://github.com/RLRama/chatbot-basic" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
-            <a href="https://seminario2-dssi-rlri.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary"><i class="bi bi-box-arrow-up-right"></i> Website</a>
+            <a href="https://github.com/RLRama/chatbot-basic" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info" role="button">Repository</a>
+            <a href="https://seminario2-dssi-rlri.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary" role="button"><i class="bi bi-box-arrow-up-right"></i> Website</a>
           </div>
         </div>
       </div>
@@ -216,8 +259,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-            <a href="https://github.com/RLRama/myss-p" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info">Repository</a>
-            <a href="https://myss-tp-cn.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary"><i class="bi bi-box-arrow-up-right"></i> Website</a>
+            <a href="https://github.com/RLRama/myss-p" target="_blank" rel="noreferrer noopener" class="btn btn-outline-info" role="button">Repository</a>
+            <a href="https://myss-tp-cn.streamlit.app/" target="_blank" rel="noreferrer noopener" class="btn btn-outline-primary" role="button"><i class="bi bi-box-arrow-up-right"></i> Website</a>
           </div>
         </div>
       </div>
