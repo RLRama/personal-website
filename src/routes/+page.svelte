@@ -9,16 +9,15 @@
         CardText,
         Button,
         Badge,
-        Form,
-        FormGroup,
-        Label,
-        Input
+        Nav,
+        NavItem,
+        NavLink, Icon
     } from '@sveltestrap/sveltestrap';
 
     const projects = [
         {
-            title: 'Project Alpha',
-            description: 'Full-stack web application using SvelteKit and PostgreSQL',
+            title: 'Historia Clínica Electrónica',
+            description: 'Fork of a full-stack web application using Spring Boot, Angular, and PostgreSQL',
             technologies: ['SvelteKit', 'PostgreSQL', 'Docker'],
             githubLink: '#',
             demoLink: '#'
@@ -32,9 +31,48 @@
         }
     ];
 
-    const skills = [
-        'JavaScript', 'TypeScript', 'Svelte', 'React',
-        'Node.js', 'Python', 'Docker', 'AWS'
+    const skills = {
+        languages: [
+            'JavaScript',
+            'TypeScript',
+            'Python',
+            'Java',
+            'SQL'
+        ],
+        frameworks: [
+            'React',
+            'Svelte',
+            'Node.js',
+            'Express',
+            'Django'
+        ],
+        devTools: [
+            'Docker',
+            'Kubernetes',
+            'Git',
+            'Jenkins',
+            'Webpack'
+        ],
+        cloudPlatforms: [
+            'AWS',
+            'Google Cloud',
+            'Azure'
+        ]
+    };
+
+    const languageSkills = [
+        {
+            language: 'English',
+            proficiency: 'Native'
+        },
+        {
+            language: 'Spanish',
+            proficiency: 'Professional Working Proficiency'
+        },
+        {
+            language: 'French',
+            proficiency: 'Elementary Proficiency'
+        }
     ];
 
     const workExperience = [
@@ -65,19 +103,66 @@
         }
     ];
 
-    let name = '';
-    let email = '';
-    let message = '';
+    const certifications = [
+        {
+            title: 'AWS Certified Solutions Architect',
+            issuer: 'Amazon Web Services',
+            year: '2022'
+        },
+        {
+            title: 'Certified Kubernetes Administrator (CKA)',
+            issuer: 'Cloud Native Computing Foundation',
+            year: '2021'
+        }
+    ];
 
-    function handleSubmit() {
-        console.log('Form submitted', { name, email, message });
-    }
+    const socialLinks = [
+        {
+            platform: 'LinkedIn',
+            url: '#',
+            icon: 'linkedin'
+        },
+        {
+            platform: 'GitHub',
+            url: '#',
+            icon: 'github'
+        },
+        {
+            platform: 'Twitter',
+            url: '#',
+            icon: 'twitter-x'
+        }
+    ];
 </script>
 
 <Container>
     <header class="text-center my-5">
         <h1>Jane Doe</h1>
         <p class="lead">Full Stack Developer | Open Source Enthusiast</p>
+
+        <div class="d-flex justify-content-center my-3">
+            <Button
+                    color="primary"
+                    class="me-2"
+            >
+                Download Resume (PDF)
+            </Button>
+            <Button
+                    color="secondary"
+            >
+                Download Resume (DOCX)
+            </Button>
+        </div>
+
+        <Nav class="justify-content-center">
+            {#each socialLinks as link}
+                <NavItem>
+                    <NavLink href={link.url} target="_blank">
+                        <Icon name={link.icon} />
+                    </NavLink>
+                </NavItem>
+            {/each}
+        </Nav>
     </header>
 
     <Row>
@@ -88,15 +173,63 @@
                     <CardText>
                         Passionate developer with 5+ years of experience
                         in web technologies and cloud computing.
+                        Committed to creating efficient, scalable solutions.
+
+                        Outside work, I enjoy gaming, weightlifting, and reading.
                     </CardText>
                 </CardBody>
             </Card>
 
             <Card class="mb-4">
                 <CardBody>
-                    <CardTitle>Skills</CardTitle>
-                    {#each skills as skill}
-                        <Badge color="primary" class="me-2 mb-2">{skill}</Badge>
+                    <CardTitle>Technical Skills</CardTitle>
+                    <div class="mb-2">
+                        <strong>Languages</strong>
+                        {#each skills.languages as skill}
+                            <Badge color="primary" class="me-2 mb-2">{skill}</Badge>
+                        {/each}
+                    </div>
+                    <div class="mb-2">
+                        <strong>Frameworks</strong>
+                        {#each skills.frameworks as skill}
+                            <Badge color="secondary" class="me-2 mb-2">{skill}</Badge>
+                        {/each}
+                    </div>
+                    <div class="mb-2">
+                        <strong>Dev Tools</strong>
+                        {#each skills.devTools as skill}
+                            <Badge color="info" class="me-2 mb-2">{skill}</Badge>
+                        {/each}
+                    </div>
+                    <div>
+                        <strong>Cloud Platforms</strong>
+                        {#each skills.cloudPlatforms as skill}
+                            <Badge color="success" class="me-2 mb-2">{skill}</Badge>
+                        {/each}
+                    </div>
+                </CardBody>
+            </Card>
+
+            <Card class="mb-4">
+                <CardBody>
+                    <CardTitle>Language Proficiency</CardTitle>
+                    {#each languageSkills as lang}
+                        <div class="mb-2">
+                            <strong>{lang.language}</strong>
+                            <p class="text-muted mb-0">{lang.proficiency}</p>
+                        </div>
+                    {/each}
+                </CardBody>
+            </Card>
+
+            <Card class="mb-4">
+                <CardBody>
+                    <CardTitle>Certifications</CardTitle>
+                    {#each certifications as cert}
+                        <div class="mb-2">
+                            <strong>{cert.title}</strong>
+                            <p class="text-muted mb-0">{cert.issuer} - {cert.year}</p>
+                        </div>
                     {/each}
                 </CardBody>
             </Card>
@@ -161,14 +294,7 @@
         </Col>
     </Row>
 
-
-
     <footer class="text-center my-5">
         <p>© 2024 Jane Doe | Built with SvelteKit</p>
     </footer>
 </Container>
-
-<!--
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
--->
