@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Ramiro Ignacio Rios Lopez</title>
+</svelte:head>
+
 <style>
     .badges-container {
         display: flex;
