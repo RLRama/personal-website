@@ -20,7 +20,7 @@
     import {
         Alert,
         Badge,
-        Button,
+        Button, ButtonGroup,
         Card,
         CardBody,
         CardText,
@@ -40,6 +40,7 @@
 
     const projects = [
         {
+            id: 'emr', // add this id to match translations
             title: 'Electronic Medical Record',
             description: 'Fork of a full-stack web application for hospital management and patient recordings using Spring Boot, Angular, and PostgreSQL',
             technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate/JPA', 'Lombok', 'Maven', 'Thymeleaf', 'HTML', 'CSS', 'Docker'],
@@ -47,6 +48,7 @@
             demoLink: 'https://hsi.larioja.gob.ar/'
         },
         {
+            id: 'listario', // add this id
             title: 'Listario',
             description: 'Full-stack web app for note taking with categories, tags and exporting options; in development',
             technologies: ['Go', 'Iris', 'PostgreSQL', 'GORM', 'SvelteKit'],
@@ -54,6 +56,7 @@
             demoLink: '#'
         },
         {
+            id: 'simulation', // add this id
             title: 'Models and Systems Simulation final project',
             description: 'Simple Python project for solving queue simulations; allows parameterizing',
             technologies: ['Python', 'Streamlit', 'SimPy', 'NumPy', 'Pandas'],
@@ -172,6 +175,12 @@
             icon: 'envelope'
         }
     ];
+
+    const resumeUrls = {
+        en: 'https://drive.google.com/uc?export=download&id=1-L7-vZ7CN4bGTIPy1FTxAHsuiGm40Qbk',
+        es: 'https://drive.google.com/uc?export=download&id=1-M6OZEWUiIn0XCtD5PWSXvFhM8yeDmQh'
+    }
+
 </script>
 
 <Container>
@@ -180,13 +189,20 @@
         <p class="lead">Backend Software Developer</p>
 
         <div class="d-flex justify-content-center my-3">
-            <Button
-                    color="primary"
-                    class="me-2"
-                    href="https://drive.google.com/uc?export=download&id=1-L7-vZ7CN4bGTIPy1FTxAHsuiGm40Qbk"
-            >
-                Download Resume (PDF | EN)
-            </Button>
+            <ButtonGroup>
+                <Button
+                        color="primary"
+                        href="https://drive.google.com/uc?export=download&id=1-L7-vZ7CN4bGTIPy1FTxAHsuiGm40Qbk"
+                >
+                    Download Resume (EN)
+                </Button>
+                <Button
+                        color="primary"
+                        href="https://drive.google.com/uc?export=download&id=1-M6OZEWUiIn0XCtD5PWSXvFhM8yeDmQh"
+                >
+                    Download Resume (ES)
+                </Button>
+            </ButtonGroup>
         </div>
 
         <Nav class="justify-content-center">
