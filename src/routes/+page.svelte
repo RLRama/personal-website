@@ -18,18 +18,24 @@
 
 <script>
     import {
-        Container,
-        Row,
-        Col,
+        Alert,
+        Badge,
+        Button,
         Card,
         CardBody,
-        CardTitle,
         CardText,
-        Button,
-        Badge,
+        CardTitle,
+        Col,
+        Container,
+        Form,
+        FormGroup,
+        Icon,
+        Input,
+        Label,
         Nav,
         NavItem,
-        NavLink, Icon
+        NavLink,
+        Row
     } from '@sveltestrap/sveltestrap';
 
     const projects = [
@@ -314,6 +320,55 @@
                     </CardBody>
                 </Card>
             {/each}
+        </Col>
+    </Row>
+
+    <h2 class="mt-4 text-center">Contact Me</h2>
+    <Row class="justify-content-center mb-5">
+        <Col md="6">
+            <Alert color="info" class="mb-3">
+                After clicking "Send Message", you'll be redirected to Formspree to confirm your submission.
+            </Alert>
+            <Card>
+                <CardBody>
+                    <Form action="https://formspree.io/f/manqddwz" method="POST">
+                        <FormGroup>
+                            <Label for="name">Name</Label>
+                            <Input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="Your name"
+                                    required
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="email">Email</Label>
+                            <Input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="your.email@example.com"
+                                    required
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="message">Message</Label>
+                            <Input
+                                    type="textarea"
+                                    name="message"
+                                    id="message"
+                                    rows={4}
+                                    placeholder="Your message here..."
+                                    required
+                            />
+                        </FormGroup>
+                        <div class="text-center">
+                            <Button type="submit" color="primary">Send Message</Button>
+                        </div>
+                    </Form>
+                </CardBody>
+            </Card>
         </Col>
     </Row>
 
