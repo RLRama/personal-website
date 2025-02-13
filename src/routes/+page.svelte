@@ -78,6 +78,7 @@
             'Spring Boot',
             'Iris',
             'Streamlit',
+            'SvelteKit'
         ],
         devTools: [
             'Docker',
