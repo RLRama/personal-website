@@ -6,13 +6,13 @@
     .badges-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem; /* Adjust the gap as needed */
-        max-width: 60%; /* Adjust the max-width as needed */
+        gap: 0.5rem;
+        max-width: 60%;
     }
 
     .buttons-container {
         display: flex;
-        gap: 0.5rem; /* Adjust the gap as needed */
+        gap: 0.5rem;
     }
 </style>
 
@@ -40,7 +40,7 @@
 
     const projects = [
         {
-            id: 'emr', // add this id to match translations
+            id: 'emr',
             title: 'Electronic Medical Record',
             description: 'Fork of a full-stack web application for hospital management and patient recordings using Spring Boot, Angular, and PostgreSQL',
             technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate/JPA', 'Lombok', 'Maven', 'Thymeleaf', 'HTML', 'CSS', 'Docker'],
@@ -48,7 +48,7 @@
             demoLink: 'https://hsi.larioja.gob.ar/'
         },
         {
-            id: 'listario', // add this id
+            id: 'listario',
             title: 'Listario',
             description: 'Full-stack web app for note taking with categories, tags and exporting options; in development',
             technologies: ['Go', 'Iris', 'PostgreSQL', 'GORM', 'SvelteKit'],
@@ -56,7 +56,7 @@
             demoLink: '#'
         },
         {
-            id: 'simulation', // add this id
+            id: 'simulation',
             title: 'Models and Systems Simulation final project',
             description: 'Simple Python project for solving queue simulations; allows parameterizing',
             technologies: ['Python', 'Streamlit', 'SimPy', 'NumPy', 'Pandas'],
@@ -126,12 +126,12 @@
         {
             institution: 'National University of La Rioja, Argentina',
             degree: 'Bachelor of Information Systems Engineering',
-            period: '2019 - expected Dec. 2025'
+            period: 'Mar. 2019 - expected Dec. 2025'
         },
         {
             institution: 'Manuel Belgrano Private Institute',
             degree: 'Office automation technician',
-            period: '2017 - 2018'
+            period: 'Mar. 2017 - Dec. 2018'
         }
     ];
 
