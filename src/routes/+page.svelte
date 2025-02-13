@@ -88,8 +88,10 @@
             'Redis',
             'Agile',
             'Metabase',
-            'JetBrains IDEs',
-            'Visual Studio Code'
+            'Goland',
+            'IntelliJ',
+            'WebStorm',
+            'Visual Studio/VS Code'
         ],
         platforms: [
             'Linux',
