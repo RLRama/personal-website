@@ -1,26 +1,35 @@
-#
+# My portfolio
 
-Personal portfolio starter project
+A personal portfolio website built with [SvelteKit](https://svelte.dev/docs/kit/introduction).
 
-# sv
+## Features
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+- Responsive design
+- Dynamic sections showcase
+- Contact form
+- SEO friendly
 
-## Creating a project
+## Tech stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Frontend**: SvelteKit, SvelteStrap
+- **Hosting**: Render - as a static site (or your preferred platform, check [svelte.config.js](svelte.config.js) for different adapters)
+
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## sv
+
+Powered by [`sv`](https://github.com/sveltejs/cli) CLI
+
+## Installation
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+# clone the repository
+git clone https://github.com/RLRama/personal-website.git
 ```
 
-## Developing
+### Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn` or `bun`), start a development server:
+Once you've cloned the project and installed dependencies with `npm install` (or `pnpm install` or `yarn` or `bun`), start a development server:
 
 ```bash
 npm run dev
@@ -29,14 +38,12 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
-To create a production version of your app:
+To create a production version of the app:
 
 ```bash
 npm run build
 ```
 
 You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
