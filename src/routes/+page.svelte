@@ -18,7 +18,6 @@
 
 <script>
     import {
-        Alert,
         Badge,
         Button, ButtonGroup,
         Card,
@@ -43,7 +42,6 @@
     import myss_thumbnail from '$lib/assets/myss_thumbnail.png'
     import hcia_ai_certificate from '$lib/assets/hcia_ai_certificate.jpeg'
     import hcia_cloud_certificate from '$lib/assets/hcia_cloud_certificate.jpeg'
-    import {fade} from "svelte/transition";
 
     const projects = [
         {
@@ -203,7 +201,7 @@
 </script>
 
 <Container>
-    <header in:fade={{ duration: 500, delay: 200 }} class="text-center my-5">
+    <header class="text-center my-5">
         <h1>Ramiro Ignacio Rios Lopez</h1>
         <p class="lead">Software Developer</p>
 
@@ -260,25 +258,25 @@
             <Card class="mb-4">
                 <CardBody>
                     <CardTitle>Technical Skills</CardTitle>
-                    <div class="mb-2" in:fade={{ duration: 500, delay: 200 }}>
+                    <div class="mb-2">
                         <strong>Languages</strong>
                         {#each skills.languages as skill}
                             <Badge color="light" class="me-2 mb-2">{skill}</Badge>
                         {/each}
                     </div>
-                    <div class="mb-2" in:fade={{ duration: 500, delay: 200 }}>
+                    <div class="mb-2">
                         <strong>Frameworks</strong>
                         {#each skills.frameworks as skill}
                             <Badge color="light" class="me-2 mb-2">{skill}</Badge>
                         {/each}
                     </div>
-                    <div class="mb-2" in:fade={{ duration: 500, delay: 200 }}>
+                    <div class="mb-2">
                         <strong>Dev Tools</strong>
                         {#each skills.devTools as skill}
                             <Badge color="light" class="me-2 mb-2">{skill}</Badge>
                         {/each}
                     </div>
-                    <div class="mb-2" in:fade={{ duration: 500, delay: 200 }}>
+                    <div class="mb-2">
                         <strong>Platforms</strong>
                         {#each skills.platforms as skill}
                             <Badge color="light" class="me-2 mb-2">{skill}</Badge>
