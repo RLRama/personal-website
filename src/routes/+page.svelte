@@ -29,31 +29,40 @@
         Container,
         Form,
         FormGroup,
-        Icon,
+        Icon, Image,
         Input,
         Label,
         Nav,
         NavItem,
         NavLink,
-        Row
+        Row,
+        ThemeToggler, Tooltip
     } from '@sveltestrap/sveltestrap';
+    import emr_thumbnail from '$lib/assets/emr_thumbnail.png'
+    import listario_thumbnail from '$lib/assets/listario_thumbnail.png'
+    import myss_thumbnail from '$lib/assets/myss_thumbnail.png'
+    import hcia_ai_certificate from '$lib/assets/hcia_ai_certificate.jpeg'
+    import hcia_cloud_certificate from '$lib/assets/hcia_cloud_certificate.jpeg'
+    import {fade} from "svelte/transition";
 
     const projects = [
         {
             id: 'emr',
             title: 'Electronic Medical Record',
-            description: 'Fork of a full-stack web application for hospital management and patient recordings using Spring Boot, Angular, and PostgreSQL',
+            description: 'Collaborating in a fork of a full-stack web application for hospital management and patient recordings using Spring Boot, Angular, and PostgreSQL',
             technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate/JPA', 'Lombok', 'Maven', 'Thymeleaf', 'HTML', 'CSS', 'Docker'],
             repoLink: 'https://github.com/Historia-Clinica-La-Rioja/historia_clinica_LR',
-            demoLink: 'https://hsi.larioja.gob.ar/'
+            demoLink: 'https://hsi.larioja.gob.ar/',
+            img: emr_thumbnail,
         },
         {
             id: 'listario',
             title: 'Listario',
-            description: 'Full-stack web app for note taking with categories, tags and exporting options; in development',
-            technologies: ['Go', 'Iris', 'PostgreSQL', 'GORM', 'SvelteKit'],
+            description: 'Full-stack web app for task management: including categories, priorities, notifications, etc. (in development)',
+            technologies: ['Go', 'Iris', 'PostgreSQL', 'GORM', 'SvelteKit', 'JWT', 'Swagger UI'],
             repoLink: 'https://github.com/RLRama/listario-backend',
-            demoLink: '#'
+            demoLink: 'https://listario.vercel.app/',
+            img: listario_thumbnail,
         },
         {
             id: 'simulation',
@@ -61,7 +70,8 @@
             description: 'Simple Python project for solving queue simulations; allows parameterizing',
             technologies: ['Python', 'Streamlit', 'SimPy', 'NumPy', 'Pandas'],
             repoLink: 'https://github.com/RLRama/myss-p',
-            demoLink: 'https://myss-tp-cn.streamlit.app/'
+            demoLink: 'https://myss-tp-cn.streamlit.app/',
+            img: myss_thumbnail,
         }
     ];
 
@@ -72,13 +82,14 @@
             'SQL',
             'Python',
             'HTML',
-            'CSS'
+            'CSS',
+            'JS'
         ],
         frameworks: [
             'Spring Boot',
             'Iris',
             'Streamlit',
-            'SvelteKit'
+            'SvelteKit/Svelte'
         ],
         devTools: [
             'Docker',
@@ -102,7 +113,7 @@
     const languageSkills = [
         {
             language: 'English',
-            proficiency: 'Professional Working Proficiency'
+            proficiency: 'Professional working proficiency'
         },
         {
             language: 'Spanish',
@@ -115,7 +126,7 @@
             company: 'Ministry of Public Health (La Rioja, Argentina)',
             role: 'Backend developer',
             period: 'Apr. 2023 - Present',
-            description: 'Expanded a REST API using Spring Boot and PostgreSQL to add new functionalities (approx. twice) for a hospital management and patient record system. Maintained Metabase boards and reports. Perform database operations (update and add tables and entries).'
+            description: 'Expanded a REST API using Spring Boot and PostgreSQL. Wrote 4K+ lines of clean layered code. Maintained Metabase boards and reports. Performed database operations (update and add tables and entries). Writing a new extensions with Go and Svelte.'
         },
         {
             company: 'Freelance professional',
@@ -142,17 +153,20 @@
         {
             title: 'HCIA-AI',
             issuer: 'Huawei Seeds for the Future',
-            year: '2024'
+            year: '2024',
+            link: hcia_ai_certificate
         },
         {
             title: 'HCIA-CLOUD',
             issuer: 'Huawei Seeds for the Future',
-            year: '2024'
+            year: '2024',
+            link: hcia_cloud_certificate
         },
         {
             title: 'English Certificate (C2 Proficient)',
             issuer: 'EF SET',
-            year: '2023'
+            year: '2023',
+            link: "https://cert.efset.org/gYXwA3"
         },
     ];
 
@@ -180,32 +194,42 @@
     ];
 
     const resumeUrls = {
-        en: 'https://drive.google.com/uc?export=download&id=1-L7-vZ7CN4bGTIPy1FTxAHsuiGm40Qbk',
-        es: 'https://drive.google.com/uc?export=download&id=1-M6OZEWUiIn0XCtD5PWSXvFhM8yeDmQh'
+        en: "https://drive.google.com/uc?export=download&id=1-L7-vZ7CN4bGTIPy1FTxAHsuiGm40Qbk",
+        es: "https://drive.google.com/uc?export=download&id=1-M6OZEWUiIn0XCtD5PWSXvFhM8yeDmQh"
     }
+
+    let validated = false;
 
 </script>
 
 <Container>
-    <header class="text-center my-5">
+    <header in:fade={{ duration: 500, delay: 200 }} class="text-center my-5">
         <h1>Ramiro Ignacio Rios Lopez</h1>
-        <p class="lead">Backend Software Developer</p>
+        <p class="lead">Software Developer</p>
 
         <div class="d-flex justify-content-center my-3">
             <ButtonGroup>
                 <Button
                         color="primary"
-                        href="https://drive.google.com/uc?export=download&id=1-L7-vZ7CN4bGTIPy1FTxAHsuiGm40Qbk"
+                        href={resumeUrls.en}
                 >
                     Download Resume (EN)
                 </Button>
                 <Button
                         color="primary"
-                        href="https://drive.google.com/uc?export=download&id=1-M6OZEWUiIn0XCtD5PWSXvFhM8yeDmQh"
+                        href={resumeUrls.es}
                 >
                     Download Resume (ES)
                 </Button>
             </ButtonGroup>
+        </div>
+
+        <div class="d-flex justify-content-center my-3">
+            <ThemeToggler let:currentColorMode let:toggleColorMode>
+                <Button color="secondary" on:click={() => toggleColorMode()}>
+                    Toggle theme: {currentColorMode}
+                </Button>
+            </ThemeToggler>
         </div>
 
         <Nav class="justify-content-center">
@@ -225,8 +249,8 @@
                 <CardBody>
                     <CardTitle>About me</CardTitle>
                     <CardText>
-                        Passionate developer with 1.5+ years of experience
-                        in APIs and databases.
+                        Passionate developer with 2+ years of experience
+                        specializing in APIs, databases, and server-side architecture.
                         Committed to creating efficient, scalable solutions.
                         Outside work, I enjoy gaming, weightlifting, and reading.
                     </CardText>
@@ -236,28 +260,28 @@
             <Card class="mb-4">
                 <CardBody>
                     <CardTitle>Technical Skills</CardTitle>
-                    <div class="mb-2">
+                    <div class="mb-2" in:fade={{ duration: 500, delay: 200 }}>
                         <strong>Languages</strong>
                         {#each skills.languages as skill}
-                            <Badge color="primary" class="me-2 mb-2">{skill}</Badge>
+                            <Badge color="light" class="me-2 mb-2">{skill}</Badge>
                         {/each}
                     </div>
-                    <div class="mb-2">
+                    <div class="mb-2" in:fade={{ duration: 500, delay: 200 }}>
                         <strong>Frameworks</strong>
                         {#each skills.frameworks as skill}
-                            <Badge color="secondary" class="me-2 mb-2">{skill}</Badge>
+                            <Badge color="light" class="me-2 mb-2">{skill}</Badge>
                         {/each}
                     </div>
-                    <div class="mb-2">
+                    <div class="mb-2" in:fade={{ duration: 500, delay: 200 }}>
                         <strong>Dev Tools</strong>
                         {#each skills.devTools as skill}
-                            <Badge color="info" class="me-2 mb-2">{skill}</Badge>
+                            <Badge color="light" class="me-2 mb-2">{skill}</Badge>
                         {/each}
                     </div>
-                    <div>
+                    <div class="mb-2" in:fade={{ duration: 500, delay: 200 }}>
                         <strong>Platforms</strong>
                         {#each skills.platforms as skill}
-                            <Badge color="success" class="me-2 mb-2">{skill}</Badge>
+                            <Badge color="light" class="me-2 mb-2">{skill}</Badge>
                         {/each}
                     </div>
                 </CardBody>
@@ -282,6 +306,7 @@
                         <div class="mb-2">
                             <strong>{cert.title}</strong>
                             <p class="text-muted mb-0">{cert.issuer} - {cert.year}</p>
+                            <Badge href={cert.link} target="_blank" color="primary">View</Badge>
                         </div>
                     {/each}
                 </CardBody>
@@ -292,6 +317,12 @@
             <h2>Projects</h2>
             {#each projects as project}
                 <Card class="mb-3">
+                    <Image
+                    alt="This project's thumbnail"
+                    fluid
+                    thumbnail
+                    src={project.img}
+                    />
                     <CardBody>
                         <CardTitle>{project.title}</CardTitle>
                         <CardText>{project.description}</CardText>
@@ -345,12 +376,9 @@
     <h2 class="mt-4 text-center">Contact Me</h2>
     <Row class="justify-content-center mb-5">
         <Col md="6">
-            <Alert color="info" class="mb-3">
-                After clicking "Send Message", you'll be redirected to Formspree to confirm your submission.
-            </Alert>
             <Card>
                 <CardBody>
-                    <Form action="https://formspree.io/f/manqddwz" method="POST">
+                    <Form {validated} action="https://formspree.io/f/manqddwz" method="POST">
                         <FormGroup>
                             <Label for="name">Name</Label>
                             <Input
@@ -377,13 +405,21 @@
                                     type="textarea"
                                     name="message"
                                     id="message"
-                                    rows={4}
+                                    rows={3}
                                     placeholder="Your message here..."
                                     required
                             />
                         </FormGroup>
                         <div class="text-center">
-                            <Button type="submit" color="primary">Send Message</Button>
+                            <Button type="submit" id="submitBtn" color="primary">Send Message</Button>
+                            <Tooltip
+                                    animation
+                                    delay={0}
+                                    id=""
+                                    isOpen={false}
+                                    placement="top"
+                                    target="submitBtn"
+                            >After clicking 'Send Message', you'll be redirected to Formspree to confirm your submission.</Tooltip>
                         </div>
                     </Form>
                 </CardBody>
