@@ -47,7 +47,7 @@
         {
             id: 'emr',
             title: 'Electronic Medical Record',
-            description: 'Collaborating in a fork of a full-stack web application for hospital management and patient recordings using Spring Boot, Angular, and PostgreSQL',
+            description: 'Collaborating in a fork of a full-stack web application for hospital management and patient recordings using Spring Boot, Angular, and PostgreSQL.',
             technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate/JPA', 'Lombok', 'Maven', 'Thymeleaf', 'HTML', 'CSS', 'Docker'],
             repoLink: 'https://github.com/Historia-Clinica-La-Rioja/historia_clinica_LR',
             demoLink: 'https://hsi.larioja.gob.ar/',
@@ -56,7 +56,7 @@
         {
             id: 'listario',
             title: 'Listario',
-            description: 'Full-stack web app for task management: including categories, priorities, notifications, etc. (in development)',
+            description: 'Full-stack web app for task management: including categories, priorities, notifications, etc. In development.',
             technologies: ['Go', 'Iris', 'PostgreSQL', 'GORM', 'SvelteKit', 'JWT', 'Swagger UI'],
             repoLink: 'https://github.com/RLRama/listario-backend',
             demoLink: 'https://listario.vercel.app/',
@@ -124,7 +124,7 @@
             company: 'Ministry of Public Health (La Rioja, Argentina)',
             role: 'Backend developer',
             period: 'Apr. 2023 - Present',
-            description: 'Expanded a REST API using Spring Boot and PostgreSQL. Wrote 4K+ lines of clean layered code. Maintained Metabase boards and reports. Performed database operations (update and add tables and entries). Writing a new extensions with Go and Svelte.'
+            description: 'Expanded a REST API using Spring Boot and PostgreSQL. Wrote 4K+ lines of clean layered code. Maintained Metabase boards and reports. Performed database operations (update and add tables and entries). Writing new extensions with Go and Svelte.'
         },
         {
             company: 'Freelance professional',
@@ -192,8 +192,8 @@
     ];
 
     const resumeUrls = {
-        en: "https://drive.google.com/uc?export=download&id=1-L7-vZ7CN4bGTIPy1FTxAHsuiGm40Qbk",
-        es: "https://drive.google.com/uc?export=download&id=1-M6OZEWUiIn0XCtD5PWSXvFhM8yeDmQh"
+        en: "https://drive.google.com/uc?export=download&id=1V3WxXLv4eLpgu1hysLtoGJ9fTOoq5lHc",
+        es: "https://drive.google.com/uc?export=download&id=1KmWi1eHawkZtVZbaKWef3CfUzId3R6Mq"
     }
 
     let validated = false;
@@ -225,7 +225,11 @@
         <div class="d-flex justify-content-center my-3">
             <ThemeToggler let:currentColorMode let:toggleColorMode>
                 <Button color="secondary" on:click={() => toggleColorMode()}>
-                    Toggle theme: {currentColorMode}
+                    {#if currentColorMode === 'light'}
+                        <Icon name="moon"/>
+                    {:else}
+                        <Icon name="sun"/>
+                    {/if}
                 </Button>
             </ThemeToggler>
         </div>
