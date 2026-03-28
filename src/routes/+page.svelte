@@ -39,11 +39,28 @@
     } from '@sveltestrap/sveltestrap';
     import emr_thumbnail from '$lib/assets/emr_thumbnail.png'
     import listario_thumbnail from '$lib/assets/listario_thumbnail.png'
-    import myss_thumbnail from '$lib/assets/myss_thumbnail.png'
+    import circodon_thumbnail from '$lib/assets/circodon_thumbnail.png'
+    import colbioq_thumbnail from '$lib/assets/colbioq_thumbnail.png'
     import hcia_ai_certificate from '$lib/assets/hcia_ai_certificate.jpeg'
     import hcia_cloud_certificate from '$lib/assets/hcia_cloud_certificate.jpeg'
 
     const projects = [
+        {
+            id: 'circodon',
+            title: "Web Portal - Dental Association La Rioja",
+            description: 'Mobile first, full stack web app for professionals that allows viewing and exporting payments with filtered views, with daily synchronous updates, and a dashboard for administrators.',
+            technologies: ['Go', 'SvelteKit', 'PostgreSQL', 'GORM', 'JWT', 'Gin', 'Shadcn UI', 'VSCode', 'S3'],
+            demoLink: 'https://circodont-lr-frontend.vercel.app/login',
+            img: circodon_thumbnail,
+        },
+        {
+            id: 'colbioq',
+            title: 'Web Portal - Biochemists Association La Rioja',
+            description: 'Full stack web app that allows associates viewing their payments, account status, settlements with filtered views, PDF report generation, with periodic data sync from the legacy system.',
+            technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Hibernate/JPA', 'Lombok', 'Maven', 'Thymeleaf', 'HTML', 'CSS', 'Docker'],
+            demoLink: 'https://colbioq-lr.vercel.app/',
+            img: colbioq_thumbnail,
+        },
         {
             id: 'emr',
             title: 'Electronic Medical Record',
@@ -62,49 +79,21 @@
             demoLink: 'https://listario.vercel.app/',
             img: listario_thumbnail,
         },
-        {
-            id: 'simulation',
-            title: 'Models and Systems Simulation final project',
-            description: 'Simple Python project for solving queue simulations; allows parameterizing',
-            technologies: ['Python', 'Streamlit', 'SimPy', 'NumPy', 'Pandas'],
-            repoLink: 'https://github.com/RLRama/myss-p',
-            demoLink: 'https://myss-tp-cn.streamlit.app/',
-            img: myss_thumbnail,
-        }
     ];
 
     const skills = {
         languages: [
-            'Java',
-            'Go',
-            'SQL',
-            'Python',
-            'HTML',
-            'CSS',
-            'JS'
+            'Java', 'Go', 'SQL', 'HTML/CSS', 'JS'
         ],
         frameworks: [
-            'Spring Boot',
-            'Iris',
-            'Streamlit',
-            'SvelteKit/Svelte'
+            'Spring Boot', 'Iris', 'Gin', 'SvelteKit/Svelte', 'React', 'Angular',
         ],
         devTools: [
-            'Docker',
-            'Git',
-            'PostgreSQL',
-            'MongoDB',
-            'Redis',
-            'Agile',
-            'Metabase',
-            'Goland',
-            'IntelliJ',
-            'WebStorm',
-            'Visual Studio/VS Code'
+            'Docker', 'Git', 'PostgreSQL', 'MongoDB', 'Redis', 'Agile',
+            'Metabase', 'Goland', 'IntelliJ', 'WebStorm', 'Visual Studio/VS Code'
         ],
         platforms: [
-            'Linux',
-            'Windows'
+            'Linux', 'Windows', 'Debian'
         ]
     };
 
@@ -121,6 +110,12 @@
 
     const workExperience = [
         {
+            company: 'Ensolvers',
+            role: 'Software developer',
+            period: 'Sept. 2025 - Present',
+            description: 'Worked in Hyros (MarketHero) & Ops projects, improving app features & introducing new ones.'
+        },
+        {
             company: 'Ministry of Public Health (La Rioja, Argentina)',
             role: 'Backend developer',
             period: 'Apr. 2023 - Present',
@@ -128,9 +123,9 @@
         },
         {
             company: 'Freelance professional',
-            role: 'IT technician',
+            role: 'IT technician & entrepreneur',
             period: '2014 - Present',
-            description: 'Diagnosed and repaired hardware and software problems for +100 clients. Assembled and configured custom computer systems. Stayed current with industry trends.'
+            description: 'Import & retail selling of hardware & peripherals. Diagnosed and repaired hardware and software problems for +100 clients. Assembled and configured custom computer systems.'
         }
     ];
 
@@ -138,7 +133,7 @@
         {
             institution: 'National University of La Rioja, Argentina',
             degree: 'Bachelor of Information Systems Engineering',
-            period: 'Mar. 2019 - expected Dec. 2025'
+            period: 'Mar. 2019 - expected Apr. 2026'
         },
         {
             institution: 'Manuel Belgrano Private Institute',
@@ -192,8 +187,8 @@
     ];
 
     const resumeUrls = {
-        en: "https://drive.google.com/uc?export=download&id=1V3WxXLv4eLpgu1hysLtoGJ9fTOoq5lHc",
-        es: "https://drive.google.com/uc?export=download&id=1KmWi1eHawkZtVZbaKWef3CfUzId3R6Mq"
+        en: "https://drive.google.com/uc?export=download&id=1KHRxwvCZPunF9ZRuIh_DEc4nYOXWhpDm",
+        es: "https://drive.google.com/uc?export=download&id=1LL-d-4q5phnJbJIgbr14OQ8AOVlWaxxA"
     }
 
     let validated = false;
