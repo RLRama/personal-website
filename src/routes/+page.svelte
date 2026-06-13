@@ -112,20 +112,20 @@
         {
             company: 'Ensolvers',
             role: 'Software developer',
-            period: 'Sept. 2025 - Present',
-            description: 'Worked in Hyros (MarketHero) & Ops projects, improving app features & introducing new ones.'
+            period: 'Sept. 2025 - Apr. 2026',
+            description: 'Worked in Hyros (MarketHero), Hirelens & Ops projects, improving app features & introducing new ones.'
         },
         {
-            company: 'Ministry of Public Health (La Rioja, Argentina)',
+            company: 'Ministry of Public Health',
             role: 'Backend developer',
             period: 'Apr. 2023 - Present',
-            description: 'Expanded a REST API using Spring Boot and PostgreSQL. Wrote 4K+ lines of clean layered code. Maintained Metabase boards and reports. Performed database operations (update and add tables and entries). Writing new extensions with Go and Svelte.'
+            description: 'Expanded a REST API using Spring Boot and PostgreSQL. Wrote 4K+ lines of clean layered code. Maintained Metabase boards and reports. Performed DBA tasks. Writing new extensions with Go and Svelte.'
         },
         {
             company: 'Freelance professional',
             role: 'IT technician & entrepreneur',
-            period: '2014 - Present',
-            description: 'Import & retail selling of hardware & peripherals. Diagnosed and repaired hardware and software problems for +100 clients. Assembled and configured custom computer systems.'
+            period: '2025 - Present',
+            description: 'Import & retail selling of hardware & peripherals. Diagnosed and repaired hardware and software problems for +50 clients. Assembled and configured custom computer systems.'
         }
     ];
 
@@ -133,7 +133,7 @@
         {
             institution: 'National University of La Rioja, Argentina',
             degree: 'Bachelor of Information Systems Engineering',
-            period: 'Mar. 2019 - expected Apr. 2026'
+            period: 'Mar. 2019 - May 2026'
         },
         {
             institution: 'Manuel Belgrano Private Institute',
@@ -246,7 +246,7 @@
                 <CardBody>
                     <CardTitle>About me</CardTitle>
                     <CardText>
-                        Passionate developer with 2+ years of experience
+                        Passionate developer with 3+ years of experience
                         specializing in APIs, databases, and server-side architecture.
                         Committed to creating efficient, scalable solutions.
                         Outside work, I enjoy gaming, weightlifting, and reading.
@@ -425,6 +425,6 @@
     </Row>
 
     <footer class="text-center my-5">
-        <p>© 2025 Ramiro Ignacio Rios Lopez</p>
+        <p>© 2026 Ramiro Ignacio Rios Lopez</p>
     </footer>
 </Container>
