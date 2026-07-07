@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7ef10068-a016-48b0-9124-46045fc68d60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="66" />
+    <option name="cachedIndexableFilesCount" value="133" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -102,7 +102,8 @@
       <workItem from="1783305972876" duration="545000" />
       <workItem from="1783307377462" duration="3911000" />
       <workItem from="1783311929251" duration="5392000" />
-      <workItem from="1783359448082" duration="16962000" />
+      <workItem from="1783359448082" duration="17192000" />
+      <workItem from="1783392218033" duration="132000" />
     </task>
     <servers />
   </component>

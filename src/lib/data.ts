@@ -96,6 +96,13 @@ export const portfolioData = {
 	],
 	projects: [
 		{
+			title: 'HSI Extension',
+			description:
+				'Forked and scaled a provincial electronic health record system, refactoring legacy code and building critical data engines.',
+			stack: ['Java', 'Spring Boot', 'JPA/Hibernate', 'PostgreSQL'],
+			link: 'https://hsi.larioja.gob.ar/'
+		},
+		{
 			title: 'CiudadReporta',
 			description:
 				'A comprehensive City Maintenance Reporting System. Architected the backend reporting pipelines and built a reactive client-side dashboard.',
