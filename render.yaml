@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: sveltekit-static
-    runtime: static
-    buildCommand: npm install && npm run build
-    staticPublishPath: build
-    autoDeploy: false

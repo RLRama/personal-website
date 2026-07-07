@@ -1,9 +1,11 @@
-<script>
-    import { Container, Styles } from '@sveltestrap/sveltestrap';
+<script lang="ts">
+	import './layout.css';
+
+	let { children } = $props();
 </script>
 
-<Styles />
+<svelte:head>
+	<link rel="icon" type="image/png" href="/favicon.png" />
+</svelte:head>
 
-<Container>
-    <slot />
-</Container>
+{@render children()}
