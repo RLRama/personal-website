@@ -26,9 +26,9 @@ export const portfolioData = {
 			description:
 				'Maintained and shipped full-stack features for global B2B SaaS products like Hyros (MarketHero) and Hirelens.',
 			bullets: [
-				'Scaled core product features utilizing Java, Spring Boot, React, and MySQL under rapid release cycles',
-				'Managed application containerization and optimized local development workflows using Docker, AWS, and Vite',
-				'Partnered with international, cross-functional teams in an agile environment to deliver production-ready code'
+				'Scaled core product features utilizing Java, Spring Boot, React, and MySQL under rapid release cycles.',
+				'Managed application containerization and optimized local development workflows using Docker, AWS, and Vite.',
+				'Partnered with international, cross-functional teams in an agile environment to deliver production-ready code.'
 			]
 		},
 		{
@@ -38,9 +38,9 @@ export const portfolioData = {
 			description:
 				'Scaling the backend infrastructure of the public health record system (HSI) serving the entire province.',
 			bullets: [
-				'Architected and deployed critical new endpoints for a high-throughput enterprise RESTful API built on Java and Spring Framework',
-				'Modernized legacy architecture by systematically refactoring monolithic, high-complexity classes, significantly improving codebase maintainability and onboarding times',
-				'Shipped 4,000+ lines of production code, implementing core reporting engines and healthcare assessment modules'
+				'Architected and deployed critical new endpoints for a high-throughput enterprise RESTful API built on Java and Spring Framework.',
+				'Modernized legacy architecture by systematically refactoring monolithic, high-complexity classes, significantly improving codebase maintainability and onboarding times.',
+				'Shipped 4,000+ lines of production code, implementing core reporting engines and healthcare assessment modules.'
 			]
 		},
 		{
@@ -50,8 +50,8 @@ export const portfolioData = {
 			description:
 				'Founded and operated a local hardware retail and systems optimization micro-enterprise.',
 			bullets: [
-				'Managed end-to-end technical logistics, hardware assembly, and OS optimization for 100+ clients',
-				'Directed inventory sourcing, component testing, and competitive pricing strategies for a self-sustaining side hustle'
+				'Managed end-to-end technical logistics, hardware assembly, and OS optimization for 100+ clients.',
+				'Directed inventory sourcing, component testing, and competitive pricing strategies for a self-sustaining side hustle.'
 			]
 		}
 	],
